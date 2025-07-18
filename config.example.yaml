@@ -1,5 +1,5 @@
 apiKey: <your twickets api key> # REQUIRED: See README.md for details on how to obtain.
-
+refetchTime: 20 # Time in seconds between checks for new tickets. Minimum is 20 seconds to avoid rate limiting.
 country: GB # Currently only GB is supported
 
 # Configure your notification services.

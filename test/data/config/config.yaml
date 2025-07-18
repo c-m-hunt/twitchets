@@ -1,4 +1,5 @@
 apiKey: test
+refetchTime: 20
 country: GB
 
 notification:

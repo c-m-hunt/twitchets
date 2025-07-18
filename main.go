@@ -21,7 +21,6 @@ import (
 
 const (
 	maxNumTickets = 250
-	refetchTime   = 1 * time.Minute
 )
 
 var latestTicketTime time.Time
@@ -74,7 +73,7 @@ func main() {
 	fetchAndProcessTickets(client, notificationClients, listingConfigs)
 
 	// Create ticker
-	ticker := time.NewTicker(refetchTime)
+	ticker := time.NewTicker(time.Duration(conf.RefetchTime) * time.Second)
 	defer ticker.Stop()
 
 	// Loop until exit
